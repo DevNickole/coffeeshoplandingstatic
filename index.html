@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>SML</title>
+  </head>
+  <body>
+    <header>
+      <h1>COFFEE</h1>
+      <nav class="drop-down">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+      </nav>
+      <div class="toggle-bar">
+        <i class="fas fa-bars" id="bars"></i>
+      </div>
+    </header>
+    <div class="drop-down-menu">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div class="welcome-container">
+        <h1>WELCOME</h1>
+        <h1>LET'S HAVE A COFFEE</h1>
+      </div>
+      <div class="img-container">
+        <img class="img-coffee-cup" src="cof.svg" alt="" />
+      </div>
+    </main>
+  </body>
+  <script>
+    let burger = document.querySelector(".toggle-bar");
+    let dropdownmenu = document.querySelector(".drop-down-menu");
+    let togglebtn = document.querySelector(".toggle-bar i");
+    let isOpen = false;
+    burger.addEventListener("click", () => {
+      dropdownmenu.classList.toggle("open-dropdown");
+
+      isOpen = !isOpen;
+      console.log(isOpen);
+      togglebtn.classList = isOpen ? "fas fa-xmark" : "fas fa-bars";
+    });
+  </script>
+</html>
